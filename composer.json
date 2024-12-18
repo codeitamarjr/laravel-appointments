@@ -25,6 +25,13 @@
         "mockery/mockery": "^1.5"
     },
     "autoload": {
+        "classmap": [
+            "database/migrations",
+            "database/seeders",
+            "database/factories",
+            "Http/controllers",
+            "Models"
+        ],
         "psr-4": {
             "Codeitamarjr\\LaravelAppoint\\": "src/"
         }
