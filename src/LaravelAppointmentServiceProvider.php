@@ -1,6 +1,6 @@
 <?php
 
-namespace Codeitamarjr\LaravelAppointments\src;
+namespace Codeitamarjr\LaravelAppointments;
 
 use Illuminate\Support\ServiceProvider;
 
