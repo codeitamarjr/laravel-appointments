@@ -13,7 +13,8 @@ composer require codeitamarjr/laravel-appointments
 After installing the package, publish the configuration file:
 
 ```bash
-php artisan vendor:publish --provider="CodeItamarJr\LaravelAppointments\LaravelAppointmentsServiceProvider"
+php artisan vendor:publish --provider="Codeitamarjr\LaravelAppointments\LaravelAppointmentServiceProvider" --tag=config
+php artisan vendor:publish --provider="Codeitamarjr\LaravelAppointments\LaravelAppointmentServiceProvider" --tag=migrations
 ```
 
 Run the migrations to create the necessary database tables:
