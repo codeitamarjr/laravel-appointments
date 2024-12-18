@@ -29,7 +29,7 @@
             "database/migrations",
             "database/seeders",
             "database/factories",
-            "Http/controllers",
+            "Http/Controllers",
             "Models"
         ],
         "psr-4": {
