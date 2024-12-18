@@ -8,29 +8,29 @@ class LaravelAppointmentServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        // Publish the configuration file
+        // Publish Configuration
         $this->publishes([
             __DIR__.'/../config/laravel-appointments.php' => config_path('laravel-appointments.php'),
         ], 'config');
 
-        // Publish Database
+        // Publish Migrations
         $this->publishes([
-            __DIR__.'/../database/' => database_path(),
-        ], ['database', 'migrations', 'seeders', 'factories']);
+            __DIR__.'/../database/migrations/' => database_path('migrations'),
+        ], 'migrations');
 
-        // Publish Models
+        // Publish Seeders
         $this->publishes([
-            __DIR__.'/Models/' => app_path('Models'),
-        ], 'models');
+            __DIR__.'/../database/seeders/' => database_path('seeders'),
+        ], 'seeders');
 
-        // Publish Tests
+        // Publish Factories
         $this->publishes([
-            __DIR__.'/Tests/' => base_path('tests'),
-        ], 'tests');
+            __DIR__.'/../database/factories/' => database_path('factories'),
+        ], 'factories');
 
         // Publish Controllers
         $this->publishes([
-            __DIR__.'/Http/controllers/' => app_path('Http/controllers'),
+            __DIR__.'/Http/Controllers/' => app_path('Http/Controllers'),
         ], 'controllers');
 
         // Publish Notifications
@@ -38,7 +38,16 @@ class LaravelAppointmentServiceProvider extends ServiceProvider
             __DIR__.'/Notifications/' => app_path('Notifications'),
         ], 'notifications');
 
-        // Load the package migrations
+        // Load Migrations
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+    }
+
+    public function register()
+    {
+        // Merge the configuration file
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/laravel-appointments.php',
+            'laravel-appointments'
+        );
     }
 }
