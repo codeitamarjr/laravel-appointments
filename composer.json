@@ -1,5 +1,5 @@
 {
-    "name": "codeitamarjr/laravel-appoint",
+    "name": "codeitamarjr/laravel-appointments",
     "description": "A Laravel package for managing events, time slots, and appointments with features like unlimited attendees, time-framed slots, and notification management.",
     "keywords": [
         "laravel",
