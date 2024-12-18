@@ -1,0 +1,52 @@
+{
+    "name": "codeitamarjr/laravel-appoint",
+    "description": "A Laravel package for managing events, time slots, and appointments with features like unlimited attendees, time-framed slots, and notification management.",
+    "keywords": [
+        "laravel",
+        "appointments",
+        "events",
+        "time slots",
+        "scheduler",
+        "package"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Itamar Junior",
+            "email": "hello@itjunior.dev"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^11.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "mockery/mockery": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codeitamarjr\\LaravelAppoint\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Codeitamarjr\\LaravelAppoint\\AppointServiceProvider"
+            ]
+        }
+    },
+    "support": {
+        "issues": "https://github.com/codeitamarjr/laravel-appoint/issues",
+        "source": "https://github.com/codeitamarjr/laravel-appoint"
+    },
+    "homepage": "https://github.com/codeitamarjr/laravel-appoint",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/codeitamarjr/laravel-appoint.git"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
