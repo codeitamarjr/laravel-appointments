@@ -33,25 +33,25 @@
             "Models"
         ],
         "psr-4": {
-            "Codeitamarjr\\LaravelAppoint\\": "src/"
+            "Codeitamarjr\\LaravelAppointments\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Codeitamarjr\\LaravelAppoint\\AppointServiceProvider"
+                "Codeitamarjr\\LaravelAppointments\\AppointServiceProvider"
             ]
         }
     },
     "support": {
-        "issues": "https://github.com/codeitamarjr/laravel-appoint/issues",
-        "source": "https://github.com/codeitamarjr/laravel-appoint"
+        "issues": "https://github.com/codeitamarjr/laravel-appointments/issues",
+        "source": "https://github.com/codeitamarjr/laravel-appointments"
     },
-    "homepage": "https://github.com/codeitamarjr/laravel-appoint",
+    "homepage": "https://github.com/codeitamarjr/laravel-appointments",
     "repositories": [
         {
             "type": "git",
-            "url": "https://github.com/codeitamarjr/laravel-appoint.git"
+            "url": "https://github.com/codeitamarjr/laravel-appointments.git"
         }
     ],
     "minimum-stability": "dev",
