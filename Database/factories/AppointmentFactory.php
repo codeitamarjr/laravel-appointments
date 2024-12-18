@@ -1,6 +1,6 @@
 <?php
 
-namespace Codeitamarjr\LaravelAppointments\Models;
+namespace Codeitamarjr\LaravelAppointments\src\Models;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Codeitamarjr\LaravelAppoint\Tests\Unit;
+namespace Codeitamarjr\LaravelAppointments\src\Tests\Unit;
 
 use Tests\TestCase;
-use Codeitamarjr\LaravelAppointments\Models\Slot;
-use Codeitamarjr\LaravelAppointments\Models\Event;
+use Codeitamarjr\LaravelAppointments\src\Models\Slot;
+use Codeitamarjr\LaravelAppointments\src\Models\Event;
 
 class EventTest extends TestCase
 {

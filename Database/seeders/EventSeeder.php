@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Codeitamarjr\LaravelAppointments\Models\Event;
+use Codeitamarjr\LaravelAppointments\src\Models\Event;
 
 class EventSeeder extends Seeder
 {
