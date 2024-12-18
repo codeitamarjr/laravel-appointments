@@ -30,7 +30,7 @@ class LaravelAppointmentServiceProvider extends ServiceProvider
 
         // Publish Controllers
         $this->publishes([
-            __DIR__.'/src/Http/Controllers/' => app_path('Http/Controllers'),
+            __DIR__.'/Http/Controllers/' => app_path('Http/Controllers'),
         ], 'controllers');
 
         // Publish Notifications
