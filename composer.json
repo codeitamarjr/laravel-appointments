@@ -29,9 +29,9 @@
       "Codeitamarjr\\LaravelAppointments\\": "src/"
     },
     "classmap": [
-      "src/database/migrations",
-      "src/database/seeders",
-      "src/database/factories"
+      "database/migrations",
+      "database/seeders",
+      "database/factories"
     ]
   },
   "extra": {
