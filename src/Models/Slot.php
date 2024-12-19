@@ -9,15 +9,25 @@ class Slot extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['event_id', 'start_time', 'end_time', 'attendees_limit'];
+    protected $fillable = [
+        'event_id',
+        'start_time',
+        'end_time',
+        'attendees_limit'
+    ];
 
     public function appointments(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(config('laravel-appointments.models.appointment'));
     }
 
-    public function event() : \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function event(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(config('laravel-appointments.models.event'));
+    }
+
+    protected static function newFactory()
+    {
+        return \Codeitamarjr\LaravelAppointments\Database\Factories\SlotFactory::new();
     }
 }

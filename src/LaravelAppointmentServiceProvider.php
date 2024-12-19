@@ -10,22 +10,22 @@ class LaravelAppointmentServiceProvider extends ServiceProvider
     {
         // Publish Configuration
         $this->publishes([
-            __DIR__.'/../config/laravel-appointments.php' => config_path('laravel-appointments.php'),
+            __DIR__.'/config/laravel-appointments.php' => config_path('laravel-appointments.php'),
         ], 'config');
 
         // Publish Migrations
         $this->publishes([
-            __DIR__.'/../database/migrations/' => database_path('migrations'),
+            __DIR__.'/database/migrations/' => database_path('migrations'),
         ], 'migrations');
 
         // Publish Seeders
         $this->publishes([
-            __DIR__.'/../database/seeders/' => database_path('seeders'),
+            __DIR__.'/database/seeders/' => database_path('seeders'),
         ], 'seeders');
 
         // Publish Factories
         $this->publishes([
-            __DIR__.'/../database/factories/' => database_path('factories'),
+            __DIR__.'/database/factories/' => database_path('factories'),
         ], 'factories');
 
         // Publish Controllers
@@ -33,9 +33,14 @@ class LaravelAppointmentServiceProvider extends ServiceProvider
             __DIR__.'/Http/Controllers/' => app_path('Http/Controllers'),
         ], 'controllers');
 
+        // Publish Models
+        $this->publishes([
+            __DIR__.'/Http/Models/' => app_path('Models'),
+        ], 'models');
+
         // Publish Notifications
         $this->publishes([
-            __DIR__.'/Notifications/' => app_path('Notifications'),
+            __DIR__.'/../Notifications/' => app_path('Notifications'),
         ], 'notifications');
 
         // Load Migrations
@@ -46,7 +51,7 @@ class LaravelAppointmentServiceProvider extends ServiceProvider
     {
         // Merge the configuration file
         $this->mergeConfigFrom(
-            __DIR__.'/../config/laravel-appointments.php',
+            __DIR__.'/config/laravel-appointments.php',
             'laravel-appointments'
         );
     }

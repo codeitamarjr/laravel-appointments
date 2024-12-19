@@ -27,12 +27,7 @@
   "autoload": {
     "psr-4": {
       "Codeitamarjr\\LaravelAppointments\\": "src/"
-    },
-    "classmap": [
-      "database/migrations",
-      "database/seeders",
-      "database/factories"
-    ]
+    }
   },
   "extra": {
     "laravel": {

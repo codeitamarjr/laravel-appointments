@@ -1,11 +1,13 @@
 <?php
 
-namespace Codeitamarjr\LaravelAppointments\src\Models;
+namespace Codeitamarjr\LaravelAppointments\Database\Factories;
 
+use Codeitamarjr\LaravelAppointments\Models\Slot;
+use Codeitamarjr\LaravelAppointments\Models\Event;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Slots>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Slot>
  */
 class SlotFactory extends Factory
 {

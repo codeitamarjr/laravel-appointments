@@ -1,7 +1,8 @@
 <?php
 
-namespace Codeitamarjr\LaravelAppointments\src\Models;
+namespace Codeitamarjr\LaravelAppointments\Database\Factories;
 
+use Codeitamarjr\LaravelAppointments\Models\Event;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**

@@ -15,4 +15,9 @@ class Appointment extends Model
     {
         return $this->belongsTo(config('laravel-appointments.models.slot'));
     }
+
+    public function user() : \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(config('laravel-appointments.models.user'));
+    }
 }
