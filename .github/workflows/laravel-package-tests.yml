@@ -1,0 +1,44 @@
+name: Laravel Package Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Setup PHP
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.0" # Adjust PHP version as needed
+          extensions: mbstring, sqlite3, pdo_sqlite
+          coverage: none
+
+      # Step 3: Install Composer dependencies
+      - name: Install dependencies
+        run: |
+          composer install --prefer-dist --no-progress
+
+      # Step 4: Setup Laravel environment
+      - name: Setup Laravel environment
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+          php artisan config:clear
+          php artisan migrate --force
+
+      # Step 5: Run PHPUnit tests
+      - name: Run tests
+        run: |
+          vendor/bin/phpunit --testdox
