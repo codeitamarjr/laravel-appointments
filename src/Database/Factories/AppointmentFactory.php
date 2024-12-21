@@ -4,10 +4,11 @@ namespace Codeitamarjr\LaravelAppointments\Database\Factories;
 
 use Codeitamarjr\LaravelAppointments\Models\Appointment;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Codeitamarjr\LaravelAppointments\Models\Slot;
 
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Appointment>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Codeitamarjr\LaravelAppointments\Models\Appointment>
  */
 class AppointmentFactory extends Factory
 {
@@ -22,7 +23,8 @@ class AppointmentFactory extends Factory
     {
         return [
             'slot_id' => Slot::factory(),
-            'user_id' => \App\Models\User::factory(), // Adjust based on your user model namespace
+            'participant_id' => config('laravel-appointments.models.participant')::factory(),
+            'participant_type' => config('laravel-appointments.relationships.participant', 'participant'),
         ];
     }
 }

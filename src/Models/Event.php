@@ -18,7 +18,7 @@ class Event extends Model
 
     public function slots()
     {
-        return $this->hasMany(config('laravel-appointments.models.slot'));
+        return $this->hasMany(\Codeitamarjr\LaravelAppointments\Models\Slot::class);
     }
 
     protected static function newFactory()

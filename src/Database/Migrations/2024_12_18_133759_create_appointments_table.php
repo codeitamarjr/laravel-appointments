@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('slot_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->unsignedBigInteger('slot_id');
+            $table->morphs('participant'); // Adds participant_id and participant_type
             $table->timestamps();
+
+            $table->foreign('slot_id')->references('id')->on('slots')->onDelete('cascade');
         });
     }
 
