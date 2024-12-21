@@ -15,14 +15,25 @@ After installing the package, publish the configuration file:
 ```bash
 php artisan vendor:publish --provider="Codeitamarjr\LaravelAppointments\LaravelAppointmentServiceProvider" --tag=config
 php artisan vendor:publish --provider="Codeitamarjr\LaravelAppointments\LaravelAppointmentServiceProvider" --tag=migrations
-php artisan vendor:publish --tag=tests # Optional
+```
+
+Optionally, you can publish the factories and tests:
+
+```bash
+php artisan vendor:publish --provider="Codeitamarjr\LaravelAppointments\LaravelAppointmentServiceProvider" --tag=factories
+php artisan vendor:publish --tag=tests
 ```
 
 Run the migrations to create the necessary database tables:
 
 ```bash
 php artisan migrate
-php artisan db:seed --class=Codeitamarjr\\LaravelAppointments\\Database\\Seeders\\EventSeeder # Optional
+```
+
+Run the database seeds to populate the database with sample data:
+
+```bash
+php artisan db:seed --class=Codeitamarjr\\LaravelAppointments\\Database\\Seeders\\EventSeeder
 ```
 
 ## Usage
