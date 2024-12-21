@@ -41,8 +41,14 @@ jobs:
       # Step 4: Setup Laravel environment
       - name: Setup Laravel environment
         run: |
-          cp .env.example .env
-          php artisan key:generate
+          echo "APP_NAME=Laravel" > .env
+          echo "APP_ENV=testing" >> .env
+          echo "APP_KEY=base64:$(php artisan key:generate --show)" >> .env
+          echo "APP_DEBUG=true" >> .env
+          echo "APP_URL=http://localhost" >> .env
+          echo "DB_CONNECTION=sqlite" >> .env
+          echo "DB_DATABASE=/tmp/testing.sqlite" >> .env
+          touch /tmp/testing.sqlite
           php artisan config:clear
           php artisan migrate --force
 
