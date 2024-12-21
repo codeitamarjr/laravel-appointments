@@ -4,10 +4,10 @@ on:
   push:
     branches:
       - master
-      - '*.x'
+      - "*.x"
   pull_request:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
 
 jobs:
   test:
@@ -16,20 +16,20 @@ jobs:
     steps:
       # Step 1: Checkout the repository
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Step 2: Setup PHP
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: "8.0" # Adjust PHP version as needed
-          extensions: mbstring, sqlite3, pdo_sqlite
+          php-version: "8.2"
+          extensions: dom, curl, libxml, mbstring, zip, sqlite3, pdo_sqlite
           coverage: none
 
       # Step 3: Install Composer dependencies
       - name: Install dependencies
         run: |
-          composer install --prefer-dist --no-progress
+          composer install --prefer-dist --no-interaction --no-progress
 
       # Step 4: Setup Laravel environment
       - name: Setup Laravel environment
