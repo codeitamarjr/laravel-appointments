@@ -8,3 +8,6 @@ jobs:
 
     steps:
     - uses: matriphe/laravel-pkg-test-action@v2
+      with:
+        laravel_install_args: --prefer-dist codeitamarjr/laravel-appointments:dev-master
+        package_install_args: --prefer-dist --no-progress
