@@ -3,10 +3,11 @@ name: Laravel Package Tests
 on:
   push:
     branches:
-      - main
+      - master
+      - '*.x'
   pull_request:
-    branches:
-      - main
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   test:
