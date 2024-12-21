@@ -26,13 +26,6 @@ jobs:
           extensions: dom, curl, libxml, mbstring, zip, sqlite3, pdo_sqlite
           coverage: none
 
-      # Step 2: Install Laravel
-      - name: Install Laravel
-        run: |
-          composer global require laravel/installer
-          export PATH="$HOME/.config/composer/vendor/bin:$PATH"
-          laravel new laravel-appointments
-
       # Step 3: Install Composer dependencies
       - name: Install dependencies
         run: |
