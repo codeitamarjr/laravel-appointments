@@ -15,6 +15,14 @@ class Appointment extends Model
         'participant_type' //  "Owner" or "Participant"
     ];
 
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            $model->uuid = (string) \Illuminate\Support\Str::uuid();
+        });
+    }
     /**
      * Define the polymorphic relationship with the participant.
      */

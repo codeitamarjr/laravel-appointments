@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->id();
+            $table->uuid('uuid')->unique();
             $table->unsignedBigInteger('slot_id');
             $table->morphs('participant'); // Adds participant_id and participant_type
             $table->timestamps();
