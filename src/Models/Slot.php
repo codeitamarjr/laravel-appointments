@@ -23,7 +23,7 @@ class Slot extends Model
 
     public function event(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(config('laravel-appointments.models.event'));
+        return $this->belongsTo(Slot::class);
     }
 
     protected static function newFactory()

@@ -28,6 +28,6 @@ class Appointment extends Model
      */
     public function slot(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(config('laravel-appointments.models.slot'));
+        return $this->belongsTo(Slot::class);
     }
 }
